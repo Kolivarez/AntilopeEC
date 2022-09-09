@@ -8,7 +8,7 @@
 /*:::::Pie de Pagina*/
 .pie-pagina {
   width: 100%;
-  background: linear-gradient(180deg, rgba(255, 167, 4, 0) 0%, #ffa704 100%);
+  background: #ffa704;;
 }
 .pie-pagina .grupo-1 {
   width: 100%;
@@ -69,4 +69,10 @@
     padding: 35px 0px;
   }
 }
-
+.figure{
+  width: 50px;
+  margin-right: 10px;
+}
+.copi{
+  left: 500px;
+}
