@@ -10,6 +10,7 @@ import { BusinessComponent } from './components/business/business.component';
 import { ContactComponent } from './components/contact/contact.component';
 
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { RouterModule } from '@angular/router';
     ServicesComponent,
     BusinessComponent,
     ContactComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
