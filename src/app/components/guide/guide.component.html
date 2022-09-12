@@ -1,0 +1,146 @@
+<section id="about" class="about-section-padding bg-warning">
+  <div class="container-fluid text-justify">
+    <div class="row text-justify">
+      <div class="col-lg-4 col-md-12 col-12">
+        <div class="about-text text-justify">
+          <label for="validationServer01">Direccion Remitente:</label>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-19 col-19 ps-lg-8 mt-md-8">
+        <div class="about-text text-justify">
+          <input
+            type="text"
+            name="remitente"
+            class="form-control"
+            id="validationServer01"
+            placeholder="Direccion Remitente"
+            required
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row text-justify mt-5">
+      <div class="col-lg-4 col-md-12 col-12">
+        <div class="about-text text-justify">
+          <label for="validationServer01">Direccion Destinatario:</label>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-19 col-19 ps-lg-8 mt-md-8">
+        <div class="about-text text-justify">
+          <input
+            type="text"
+            name="destinatario"
+            class="form-control"
+            id="validationServer01"
+            placeholder="Direccion Destinatario"
+            required
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row text-justify mt-5">
+      <div class="col-lg-4 col-md-12 col-12">
+        <div class="about-text text-justify">
+          <label for="validationServer01">Nombres y Apellidos:</label>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-19 col-19 ps-lg-8 mt-md-8">
+        <div class="about-text text-justify">
+          <input
+            type="text"
+            name="nombres"
+            class="form-control "
+            id="validationServer01"
+            placeholder="Nombres y Apellidos"
+            [(ngModel)]="nombres"
+            required
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row text-justify mt-5">
+      <div class="col-lg-4 col-md-12 col-12">
+        <div class="about-text text-justify">
+          <label for="validationServer01">Cedula:</label>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-19 col-19 ps-lg-8 mt-md-8">
+        <div class="about-text text-justify">
+          <input
+            type="text"
+            name="cedula"
+            class="form-control"
+            id="validationServer01"
+            placeholder="Cedula"
+            required
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row text-justify mt-5">
+      <div class="col-lg-4 col-md-12 col-12">
+        <div class="about-text text-justify">
+          <label for="validationServer01">Empresa*:</label>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-19 col-19 ps-lg-8 mt-md-8">
+        <div class="about-text text-justify">
+          <input
+            type="text"
+            name="empresa"
+            class="form-control"
+            id="validationServer01"
+            placeholder="Empresa"
+            required
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row text-justify mt-5">
+      <div class="col-lg-4 col-md-12 col-12">
+        <div class="about-text text-justify">
+          <label for="validationServer01">Celular:</label>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-19 col-19 ps-lg-8 mt-md-8">
+        <div class="about-text text-justify">
+          <input
+            type="text"
+            name="celular"
+            class="form-control"
+            id="validationServer01"
+            placeholder="Celular"
+            required
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row text-justify mt-5">
+      <div class="col-lg-4 col-md-12 col-12">
+        <div class="about-text text-justify">
+          <label for="validationServer01">Correo:</label>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-19 col-19 ps-lg-8 mt-md-8">
+        <div class="about-text text-justify">
+          <input
+            type="email"
+            name="correo"
+            class="form-control"
+            id="validationServer01"
+            placeholder="Correo"
+            required
+          />
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto mt-5">
+          <button class="btn btn-dark" type="button" value="registrar" (click)="registrarGuia()">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p *ngIf="registado"> {{mensaje}} con los siguientes datos
+    {{nombres}}
+  
+  </p>
+</section>
+
