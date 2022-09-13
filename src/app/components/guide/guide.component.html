@@ -14,6 +14,7 @@
             class="form-control"
             id="validationServer01"
             placeholder="Direccion Remitente"
+            [(ngModel)]="formremitente"
             required
           />
         </div>
@@ -33,6 +34,7 @@
             class="form-control"
             id="validationServer01"
             placeholder="Direccion Destinatario"
+            [(ngModel)]="formdestinatario"
             required
           />
         </div>
@@ -49,10 +51,10 @@
           <input
             type="text"
             name="nombres"
-            class="form-control "
+            class="form-control"
             id="validationServer01"
             placeholder="Nombres y Apellidos"
-            [(ngModel)]="nombres"
+            [(ngModel)]="formnombre"
             required
           />
         </div>
@@ -72,6 +74,7 @@
             class="form-control"
             id="validationServer01"
             placeholder="Cedula"
+            [(ngModel)]="formcedula"
             required
           />
         </div>
@@ -91,6 +94,7 @@
             class="form-control"
             id="validationServer01"
             placeholder="Empresa"
+            [(ngModel)]="formempresa"
             required
           />
         </div>
@@ -110,6 +114,7 @@
             class="form-control"
             id="validationServer01"
             placeholder="Celular"
+            [(ngModel)]="formcelular"
             required
           />
         </div>
@@ -129,18 +134,28 @@
             class="form-control"
             id="validationServer01"
             placeholder="Correo"
+            [(ngModel)]="formcorreo"
             required
           />
         </div>
         <div class="d-grid gap-2 col-6 mx-auto mt-5">
-          <button class="btn btn-dark" type="button" value="registrar" (click)="registrarGuia()">Enviar</button>
+          <button class="btn btn-dark" type="button" value="registrar" (click)="agregarGuia()">
+            Enviar
+          </button>
         </div>
       </div>
     </div>
   </div>
-  <p *ngIf="registado"> {{mensaje}} con los siguientes datos
-    {{nombres}}
-  
-  </p>
 </section>
 
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div *ngFor="let guia of guias; let i = index">
+        {{ i + 1 }}: {{ guia.nombre }} {{ guia.cedula }} {{ guia.remitente }}
+        {{ guia.destinatario }}{{ guia.empresa }} {{ guia.correo }}
+        {{ guia.celular }}
+      </div>
+    </div>
+  </div>
+</div>

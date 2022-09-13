@@ -1,4 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { DataServices } from 'src/app/data.serveces';
+import { Guia } from './guide.model';
+
+
 
 @Component({
   selector: 'app-guide',
@@ -7,27 +12,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GuideComponent implements OnInit {
 
-  constructor() {
+  constructor(private dataServices:DataServices, private http: HttpClient) {
+
   }
 
   ngOnInit(): void {
 
   }
-  mensaje = "";
-  registado = false;
+  titulo = "registro de guias";
+  guias: Guia[] = [
+    new Guia("javi", "mena 2 ", "kevin", "1726437864", "wallpana", "087044553", "kekev.com")
+  ];
 
-  nombres:string="";
-  cedula:string="";
-  remitente:string="";
-  destinatario:string="";
-  empresa:string="";
-  celular:string="";
-
-
-
-  registrarGuia() {
-    this.registado = true
-    this.mensaje = "Guia enviada con exito"
+  agregarGuia() {
+    let miGuia = new Guia(this.formnombre, this.formcedula, this.formremitente, 
+      this.formdestinatario, this.formempresa, this.formcorreo, this.formcelular)
+      this.guias.push(miGuia)
+      this.dataServices.guardarGuias(this.guias)
   }
+
+
+
+  formnombre: string = "";
+  formcedula: string = "";
+  formremitente: string = "";
+  formdestinatario: string = "";
+  formempresa: string = "";
+  formcorreo: string = "";
+  formcelular: string = "";
+
+
 
 }
