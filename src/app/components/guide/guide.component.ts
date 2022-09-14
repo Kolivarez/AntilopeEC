@@ -4,6 +4,7 @@ import { DataServices } from 'src/app/data.serveces';
 import { Guia } from './guide.model';
 import jsPDF from "jspdf";
 import html2canvas from 'html2canvas';
+import { ServicesComponent } from '../services/services.component';
 
 
 
@@ -29,12 +30,14 @@ export class GuideComponent implements OnInit {
   ];
   descargarPDF(){
     this.downloadPDF();
+    return(ServicesComponent)
   }
   agregarGuia() {
     let miGuia = new Guia(this.formnombre, this.formcedula, this.formremitente,
       this.formdestinatario, this.formempresa, this.formcorreo, this.formcelular)
       this.guias.push(miGuia)
       this.dataServices.guardarGuias(this.guias)
+ 
  
     console.log(this.guias)
   }
